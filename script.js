@@ -29,3 +29,18 @@ function displayQuestion(questionObj) {
     optionsElement.appendChild(optionElement);
   });
 }
+
+function checkAnswer(selectedAnswer, correctAnswer) {
+  userResponses.push({
+    question: questions[currentQuestionIndex].question,
+    userAnswer: selectedAnswer,
+    correctAnswer: correctAnswer,
+  });
+
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    displayQuestion(questions[currentQuestionIndex]);
+  } else {
+    showScore();
+  }
+}
