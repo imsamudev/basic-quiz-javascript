@@ -1,6 +1,7 @@
 let questions = [
   {
     question: "",
+    options: [],
     answer: "",
     explanation: "",
   },
@@ -44,3 +45,8 @@ function checkAnswer(selectedAnswer, correctAnswer) {
     showScore();
   }
 }
+
+// execute
+shuffleQuestions();
+
+displayQuestion(questions[currentQuestionIndex]);
