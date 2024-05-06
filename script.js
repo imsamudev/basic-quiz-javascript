@@ -46,6 +46,31 @@ function checkAnswer(selectedAnswer, correctAnswer) {
   }
 }
 
+function showScore() {
+  const scoreElement = document.getElementById("score");
+  const tableElement = document.getElementById("responseTable");
+
+  let correctCount = 0;
+
+  userResponses.forEach((response) => {
+    if (response.userAnswer === response.correctAnswer) {
+      correctCount++;
+    }
+
+    const row = tableElement.insertRow();
+    row.insertCell(0).textContent = response.question;
+    row.insertCell(1).textContent = response.userAnswer;
+    row.insertCell(2).textContent = response.correctAnswer;
+  });
+
+  const percentage = (correctCount / questions.length) * 100;
+  scoreElement.textContent = `Puntuación final: ${correctCount}/${
+    questions.length
+  } respuestas correctas (${percentage.toFixed(2)}%).`;
+
+  // Mostrar la tabla al finalizar el quiz
+  tableElement.style.display = "block";
+}
 // execute
 shuffleQuestions();
 
