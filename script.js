@@ -68,10 +68,15 @@ function showScore() {
     questions.length
   } respuestas correctas (${percentage.toFixed(2)}%).`;
 
-  // Mostrar la tabla al finalizar el quiz
+  // Ejecutar tabla de puntuación al finalizar el quizz.
   tableElement.style.display = "block";
 }
-// execute
+
+// sección de corrección
+const correctionAccordion = document.getElementById("correctionAccordion");
+const toggleAccordionButton = document.getElementById("toggleAccordion");
+
+// ejecución de preguntas y azar de preguntas.
 shuffleQuestions();
 
 displayQuestion(questions[currentQuestionIndex]);
