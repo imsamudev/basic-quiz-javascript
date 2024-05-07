@@ -7,13 +7,15 @@ let questions = [
   },
 ];
 
+// desordenar las preguntas
 function shuffleQuestions() {
   questions = questions.sort(() => Math.random() - 0.5);
 }
-
+// mantener índice pregunta actual
 let currentQuestionIndex = 0;
 let userResponses = [];
 
+// mostrar pregunta y sus opciones
 function displayQuestion(questionObj) {
   const questionElement = document.getElementById("question");
   const optionsElement = document.getElementById("options");
@@ -31,6 +33,7 @@ function displayQuestion(questionObj) {
   });
 }
 
+// verificación de respuesta seleccionada por usuario
 function checkAnswer(selectedAnswer, correctAnswer) {
   userResponses.push({
     question: questions[currentQuestionIndex].question,
@@ -38,6 +41,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
     correctAnswer: correctAnswer,
   });
 
+  // siguiente pregunta
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     displayQuestion(questions[currentQuestionIndex]);
@@ -46,6 +50,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
   }
 }
 
+// mostrar puntuación y respuestas
 function showScore() {
   const scoreElement = document.getElementById("score");
   const tableElement = document.getElementById("responseTable");
@@ -70,11 +75,11 @@ function showScore() {
 
   // Ejecutar tabla de puntuación al finalizar el quizz.
   tableElement.style.display = "block";
-}
 
-// sección de corrección
-const correctionAccordion = document.getElementById("correctionAccordion");
-const toggleAccordionButton = document.getElementById("toggleAccordion");
+  // sección de corrección
+  const correctionAccordion = document.getElementById("correctionAccordion");
+  const toggleAccordionButton = document.getElementById("toggleAccordion");
+}
 
 // ejecución de preguntas y azar de preguntas.
 shuffleQuestions();
