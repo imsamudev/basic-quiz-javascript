@@ -79,6 +79,15 @@ function showScore() {
   // sección de corrección
   const correctionAccordion = document.getElementById("correctionAccordion");
   const toggleAccordionButton = document.getElementById("toggleAccordion");
+
+  // visibilidad del acordeón
+  toggleAccordionButton.addEventListener("click", () => {
+    if (correctionAccordion.style.display === "none") {
+      correctionAccordion.style.display = "block";
+    } else {
+      correctionAccordion.style.display = "none";
+    }
+  });
 }
 
 // ejecución de preguntas y azar de preguntas.
