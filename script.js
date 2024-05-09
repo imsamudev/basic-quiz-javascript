@@ -88,6 +88,12 @@ function showScore() {
       correctionAccordion.style.display = "none";
     }
   });
+  // Contenido acordeón
+  correctionAccordion.style.display = "none";
+
+  // mostrar la sección de corrección al finalizar el quiz
+  const correctionElement = document.getElementById("correction");
+  correctionElement.style.display = "block";
 }
 
 // ejecución de preguntas y azar de preguntas.
