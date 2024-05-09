@@ -94,6 +94,22 @@ function showScore() {
   // mostrar la sección de corrección al finalizar el quiz
   const correctionElement = document.getElementById("correction");
   correctionElement.style.display = "block";
+
+  userResponses.forEach((response) => {
+    if (response.userAnswer !== response.correctAnswer) {
+      const correctionItem = document.createElement("div");
+      correctionItem.innerHTML = `
+      <p><strong>Pregunta:</strong> ${response.question}</p>
+    <p><strong>Respuesta seleccionada:</strong> ${response.userAnswer}</p>
+    <p><strong>Respuesta correcta:</strong> ${response.correctAnswer}</p>
+    <p><strong>Explicación:</strong> ${
+      questions.find((question) => question.question === response.question)
+        .explanation
+    }</p>
+  `;
+      correctionAccordion.appendChild(correctionItem);
+    }
+  });
 }
 
 // ejecución de preguntas y azar de preguntas.
