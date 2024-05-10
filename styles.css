@@ -11,3 +11,26 @@ body {
   justify-content: center;
   align-items: center;
 }
+#responseTable {
+  display: none;
+}
+
+.accordion {
+  display: none; /* Ocultar el acordeón por defecto */
+}
+
+#toggleAccordion {
+  margin-left: 10px;
+}
+
+#correction {
+  display: none;
+  text-align: center;
+  background-color: red;
+  height: 100%;
+  width: 50%;
+}
+#toggleAccordion {
+  cursor: pointer;
+  margin: 30px 0px;
+}
