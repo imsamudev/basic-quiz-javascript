@@ -23,8 +23,8 @@ body {
   background-color: white;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  height: 70%;
-  width: 50%;
+  height: 90%;
+  width: 90%;
 }
 #responseTable {
   display: none;
@@ -47,4 +47,12 @@ body {
 #toggleAccordion {
   cursor: pointer;
   margin: 30px 0px;
+}
+
+/* diseño mobile-first */
+@media (min-width: 768px) {
+  .container {
+    height: 80%;
+    width: 70%;
+  }
 }
