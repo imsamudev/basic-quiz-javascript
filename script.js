@@ -63,6 +63,10 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 function showScore() {
   const scoreElement = document.getElementById("score");
   const tableElement = document.getElementById("responseTable");
+  const questionElement = document.getElementById("question");
+  const optionsElement = document.getElementById("options");
+  questionElement.textContent = "";
+  optionsElement.innerHTML = "";
 
   let correctCount = 0;
 
