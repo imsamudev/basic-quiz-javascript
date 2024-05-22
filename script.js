@@ -1,30 +1,25 @@
-let questions = [
-  {
-    question:
-      "¿Cómo está funcionando el juego con las funcionalidades agregadas?",
-    options: ["Excelente", "Muy bien", "Regular", "Mal"],
-    answer: "Excelente",
-    explanation: "Probando quizz",
-  },
-  {
-    question:
-      "¿Cuál es la forma correcta de declarar una variable en JavaScript?",
-    options: [" var myVar", "variable myVar", "let myVar", "const myVar"],
-    answer: "let myVar",
-    explanation:
-      "En JavaScript, puedes declarar variables utilizando las palabras clave var, let o const. En este caso, let se utiliza para declarar una variable que puede ser reasignada posteriormente.",
-  },
-];
+// Dejaré comentarios en el desarrollo JS para mejor comprensión.
 
-// desordenar las preguntas
-function shuffleQuestions() {
-  questions = questions.sort(() => Math.random() - 0.5);
-}
-// mantener índice pregunta actual
+// Al aprender sobre JSON, decidí alojar las preguntas y respuestas en un .json aparte. Usando fetch en la función loadQuestions de forma asincrónica extraemos las preguntas, opciones y respuestas.
+
+let questions = [];
 let currentQuestionIndex = 0;
 let userResponses = [];
 
-// mostrar pregunta y sus opciones
+// Cargamos preguntas desde el archivo JSON
+async function loadQuestions() {
+  const response = await fetch("questions.json");
+  questions = await response.json();
+  shuffleQuestions();
+  displayQuestion(questions[currentQuestionIndex]);
+}
+
+// Desordenar las preguntas
+function shuffleQuestions() {
+  questions = questions.sort(() => Math.random() - 0.5);
+}
+
+// Mostrar pregunta y sus opciones
 function displayQuestion(questionObj) {
   const questionElement = document.getElementById("question");
   const optionsElement = document.getElementById("options");
@@ -42,7 +37,7 @@ function displayQuestion(questionObj) {
   });
 }
 
-// verificación de respuesta seleccionada por usuario
+// Verificación de respuesta seleccionada por usuario
 function checkAnswer(selectedAnswer, correctAnswer) {
   userResponses.push({
     question: questions[currentQuestionIndex].question,
@@ -50,7 +45,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
     correctAnswer: correctAnswer,
   });
 
-  // siguiente pregunta
+  // Siguiente pregunta
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     displayQuestion(questions[currentQuestionIndex]);
@@ -59,7 +54,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
   }
 }
 
-// mostrar puntuación y respuestas
+// Mostrar puntuación y respuestas
 function showScore() {
   const scoreElement = document.getElementById("score");
   const tableElement = document.getElementById("responseTable");
@@ -89,11 +84,11 @@ function showScore() {
   // Ejecutar tabla de puntuación al finalizar el quizz.
   tableElement.style.display = "block";
 
-  // sección de corrección
+  // Sección de corrección
   const correctionAccordion = document.getElementById("correctionAccordion");
   const toggleAccordionButton = document.getElementById("toggleAccordion");
 
-  // visibilidad del acordeón
+  // Visibilidad del acordeón
   toggleAccordionButton.addEventListener("click", () => {
     if (correctionAccordion.style.display === "none") {
       correctionAccordion.style.display = "block";
@@ -104,7 +99,7 @@ function showScore() {
   // Contenido acordeón
   correctionAccordion.style.display = "none";
 
-  // mostrar la sección de corrección al finalizar el quiz
+  // Mostrar la sección de corrección al finalizar el quiz
   const correctionElement = document.getElementById("correction");
   correctionElement.style.display = "block";
 
@@ -125,7 +120,5 @@ function showScore() {
   });
 }
 
-// ejecución de preguntas y azar de preguntas.
-shuffleQuestions();
-
-displayQuestion(questions[currentQuestionIndex]);
+// Ejecutar preguntas y azar de preguntas.
+loadQuestions();
