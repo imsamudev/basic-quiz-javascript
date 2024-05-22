@@ -2,6 +2,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  font-size: 1rem;
 }
 
 body,
@@ -26,6 +27,25 @@ body {
   height: 90%;
   width: 90%;
 }
+
+#question {
+  text-align: center;
+  width: 80%;
+  word-wrap: break-word;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
 #responseTable {
   display: none;
 }
