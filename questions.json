@@ -1,15 +1,62 @@
 [
-    {
-      "question": "¿Cómo está funcionando el juego con las funcionalidades agregadas?",
-      "options": ["Excelente", "Muy bien", "Regular", "Mal"],
-      "answer": "Excelente",
-      "explanation": "Probando quizz"
-    },
-    {
+  {
       "question": "¿Cuál es la forma correcta de declarar una variable en JavaScript?",
-      "options": ["var myVar", "variable myVar", "let myVar", "const myVar"],
-      "answer": "let myVar",
+      "options": ["var myVar;", "variable myVar;", "let myVar;", "const myVar;"],
+      "answer": "let myVar;",
       "explanation": "En JavaScript, puedes declarar variables utilizando las palabras clave var, let o const. En este caso, let se utiliza para declarar una variable que puede ser reasignada posteriormente."
-    }
-  ]
-  
+  },
+  {
+      "question": "¿Cuál es el resultado de la siguiente expresión en JavaScript: 5 + \"5\"?",
+      "options": ["10", "\"55\"", "Error", "\"10\""],
+      "answer": "\"55\"",
+      "explanation": "En JavaScript, cuando se realiza una operación de suma entre un número y una cadena, la cadena se convierte implícitamente en una cadena y se concatenan ambas."
+  },
+  {
+      "question": "¿Cuál es el operador utilizado para concatenar cadenas en JavaScript?",
+      "options": ["+", "-", "*", "/"],
+      "answer": "+",
+      "explanation": "En JavaScript, el operador + se utiliza para concatenar cadenas de texto."
+  },
+  {
+      "question": "¿Cuál es la forma correcta de escribir un comentario de una sola línea en JavaScript?",
+      "options": ["/* comentario */", "// comentario", "<!-- comentario -->", "<!--- comentario --->"],
+      "answer": "// comentario",
+      "explanation": "En JavaScript, los comentarios de una sola línea se escriben precediendo el texto del comentario con //."
+  },
+  {
+      "question": "¿Qué método se utiliza para convertir una cadena a un número entero en JavaScript?",
+      "options": ["parseInt()", "toInteger()", "parseFloat()", "toInt()"],
+      "answer": "parseInt()",
+      "explanation": "El método parseInt() se utiliza para convertir una cadena en un número entero en JavaScript."
+  },
+  {
+      "question": "¿Cuál de los siguientes no es un tipo de datos en JavaScript?",
+      "options": ["Number", "String", "Character", "Boolean"],
+      "answer": "Character",
+      "explanation": "En JavaScript, los tipos de datos principales son Number, String, Boolean, Object, Array, Undefined y Null. No existe un tipo de datos llamado Character."
+  },
+  {
+      "question": "¿Cuál es la palabra clave utilizada para definir una función en JavaScript?",
+      "options": ["func", "function", "def", "define"],
+      "answer": "function",
+      "explanation": "En JavaScript, se utiliza la palabra clave function para definir una función."
+  },
+  {
+      "question": "¿Cuál es el operador utilizado para la comparación estricta en JavaScript?",
+      "options": ["==", "!=", "===", "!=="],
+      "answer": "===",
+      "explanation": "El operador === se utiliza para comparar dos valores en JavaScript, incluyendo tanto el valor como el tipo de dato."
+  },
+  {
+      "question": "¿Qué método se utiliza para agregar un elemento al final de un array en JavaScript?",
+      "options": ["push()", "pop()", "add()", "append()"],
+      "answer": "push()",
+      "explanation": "El método push() se utiliza para agregar elementos al final de un array en JavaScript."
+  },
+  {
+      "question": "¿Cuál es el resultado de la siguiente expresión en JavaScript: 2 * \"3\"?",
+      "options": ["5", "6", "\"6\"", "Error"],
+      "answer": "6",
+      "explanation": "En JavaScript, cuando se realiza una operación de multiplicación entre un número y una cadena, la cadena se convierte implícitamente en un número y se realiza la multiplicación."
+  }
+]
