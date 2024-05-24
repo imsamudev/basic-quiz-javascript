@@ -23,7 +23,6 @@ body {
   gap: 25px;
   background-color: white;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
   height: 90%;
   width: 90%;
 }
@@ -46,33 +45,44 @@ button {
   cursor: pointer;
 }
 
+#score {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
 #responseTable {
   display: none;
+  height: 40%;
+  width: 90%;
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 10px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .accordion {
   display: none;
 }
 
-#toggleAccordion {
-  margin-left: 10px;
-}
-
 #correction {
   display: none;
-  text-align: center;
-  background-color: red;
-  width: 50%;
+  height: 40%;
+  width: 90%;
+  text-align: left;
+  padding: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-bottom: 10px;
 }
 #toggleAccordion {
+  width: 100%;
   cursor: pointer;
-  margin: 30px 0px;
 }
 
 /* diseño mobile-first */
 @media (min-width: 768px) {
-  .container {
-    height: 80%;
-    width: 70%;
-  }
 }
