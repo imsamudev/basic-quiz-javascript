@@ -120,5 +120,23 @@ function showScore() {
   });
 }
 
+// Agrego función para modal
+document.addEventListener("DOMContentLoaded", (event) => {
+  var modal = document.getElementById("introModal");
+
+  var startQuiz = document.getElementById("startQuiz");
+
+  modal.style.display = "flex";
+
+  // Al pulsar el logo empieza el quizz!
+  startQuiz.onclick = function () {
+    modal.style.display = "none";
+    startQuizFunction();
+  };
+});
+function startQuizFunction() {
+  console.log("¡Empieza el Quizz!");
+}
+
 // Ejecutar preguntas y azar de preguntas.
 loadQuestions();
