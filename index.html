@@ -18,7 +18,24 @@
 <!-- Es importante destacar que éste proyecto fue realizado sólo con vanilla JavaScript para reforzar mi JS. -->
 
 <body>
+    <div id="introModal" class="modal">
+        <div class="modal-content">
+            <h1 id="title-intro">Tittle test</h1>
+            <img id="startQuiz" src="./img/icons8-js-480.svg" alt="Comenzar Quiz" style="cursor: pointer;">
+            <h3 id="subtitle-intro">¡Pulsa el logo para comenzar!</h3>
+        </div>
+    </div>
     <div class="container">
+        <div id="levelSelection" style="display: none;">
+            <!-- uso algunos styles en línea en el prototipado, luego se modifica en versión final -->
+            <div class="level-section" style="display: flex; flex-direction: column; gap: 20px;">
+                <h1 class="level-title" style="width: 80%; word-wrap: break-word; text-align: center;">Para empezar,
+                    selecciona el nivel que
+                    deseas jugar.</h1>
+                <button id="startBeginnerQuiz">Nivel Principiante</button>
+                <button id="startIntermediateQuiz">Nivel Intermedio</button>
+            </div>
+        </div>
         <div id="question"></div>
         <div id="options"></div>
         <div id="score"></div>
@@ -35,13 +52,7 @@
             </div>
         </div>
     </div>
-    <div id="introModal" class="modal">
-        <div class="modal-content">
-            <h1 id="title-intro">Tittle test</h1>
-            <img id="startQuiz" src="./img/icons8-js-480.svg" alt="Comenzar Quiz" style="cursor: pointer;">
-            <h3 id="subtitle-intro">¡Pulsa el logo para comenzar!</h3>
-        </div>
-    </div>
+
     <script src="./script.js"></script>
 </body>
 
