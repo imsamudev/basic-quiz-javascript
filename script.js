@@ -6,9 +6,9 @@ let questions = [];
 let currentQuestionIndex = 0;
 let userResponses = [];
 
-// Cargamos preguntas desde el archivo JSON
-async function loadQuestions() {
-  const response = await fetch("questions.json");
+// Cargo preguntas desde el archivo JSON específico
+async function loadQuestions(file) {
+  const response = await fetch(file);
   questions = await response.json();
   shuffleQuestions();
   displayQuestion(questions[currentQuestionIndex]);
@@ -27,7 +27,7 @@ function displayQuestion(questionObj) {
   questionElement.textContent = questionObj.question;
   optionsElement.innerHTML = "";
 
-  questionObj.options.forEach((option, index) => {
+  questionObj.options.forEach((option) => {
     const optionElement = document.createElement("button");
     optionElement.textContent = option;
     optionElement.addEventListener("click", () =>
@@ -123,20 +123,35 @@ function showScore() {
 // Agrego función para modal
 document.addEventListener("DOMContentLoaded", (event) => {
   var modal = document.getElementById("introModal");
+  var levelSelection = document.getElementById("levelSelection");
 
   var startQuiz = document.getElementById("startQuiz");
 
   modal.style.display = "flex";
 
-  // Al pulsar el logo empieza el quizz!
+  // Al pulsar el logo muestro la selección del nivel
   startQuiz.onclick = function () {
     modal.style.display = "none";
-    startQuizFunction();
+    levelSelection.style.display = "block";
+  };
+
+  var startBeginnerQuiz = document.getElementById("startBeginnerQuiz");
+  var startIntermediateQuiz = document.getElementById("startIntermediateQuiz");
+
+  // Nivel principiante
+  startBeginnerQuiz.onclick = function () {
+    levelSelection.style.display = "none";
+    startQuizFunction("questions.json");
+  };
+
+  // Nivel intermedio
+  startIntermediateQuiz.onclick = function () {
+    levelSelection.style.display = "none";
+    startQuizFunction("questions_intermediate-level.json");
   };
 });
-function startQuizFunction() {
-  console.log("¡Empieza el Quizz!");
-}
 
-// Ejecutar preguntas y azar de preguntas.
-loadQuestions();
+function startQuizFunction(file) {
+  console.log("¡Empieza el Quizz!");
+  loadQuestions(file);
+}
