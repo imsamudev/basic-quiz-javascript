@@ -1,0 +1,62 @@
+[
+    {
+        "question": "¿Cuál es la salida del siguiente código?\n\nconsole.log(typeof null);",
+        "options": ["null", "undefined", "object", "number"],
+        "answer": "object",
+        "explanation": "En JavaScript, el tipo de 'null' es 'object' debido a un error histórico en el lenguaje."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre 'let' y 'var' en JavaScript?",
+        "options": ["'let' tiene alcance de función y 'var' tiene alcance de bloque", "'let' tiene alcance de bloque y 'var' tiene alcance global", "'let' se puede reasignar y 'var' no", "'let' no puede ser declarado sin inicialización"],
+        "answer": "'let' tiene alcance de bloque y 'var' tiene alcance global",
+        "explanation": "'let' tiene alcance de bloque, lo que significa que está limitado al bloque en el que se define, mientras que 'var' tiene alcance de función o global."
+    },
+    {
+        "question": "¿Qué es el 'hoisting' en JavaScript?",
+        "options": ["El comportamiento por el cual las declaraciones de variables y funciones se mueven a la parte superior de su contexto", "El proceso de enlazar eventos a los elementos del DOM", "Una técnica para optimizar la memoria en JavaScript", "El método de ordenar un array en orden ascendente"],
+        "answer": "El comportamiento por el cual las declaraciones de variables y funciones se mueven a la parte superior de su contexto",
+        "explanation": "Hoisting se refiere a que las declaraciones de variables y funciones se 'elevan' al principio de su contexto de ejecución, aunque no ocurre lo mismo con las inicializaciones."
+    },
+    {
+        "question": "¿Cuál es la salida del siguiente código?\n\nlet a = [1, 2, 3];\nlet b = a;\nb.push(4);\nconsole.log(a);",
+        "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4]", "undefined"],
+        "answer": "[1, 2, 3, 4]",
+        "explanation": "En JavaScript, los arrays se pasan por referencia. Así que 'a' y 'b' apuntan al mismo array en la memoria. Al usar 'push' en 'b', también se modifica 'a'."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre '==' y '===' en JavaScript?",
+        "options": ["'==' compara valores y '===' compara valores y tipos", "'==' compara tipos y '===' compara valores", "'==' siempre retorna true y '===' siempre retorna false", "No hay diferencia"],
+        "answer": "'==' compara valores y '===' compara valores y tipos",
+        "explanation": "'==' es el operador de igualdad abstracta que compara solo valores, mientras que '===' es el operador de igualdad estricta que compara tanto valores como tipos."
+    },
+    {
+        "question": "¿Cuál es el propósito del método 'bind()' en JavaScript?",
+        "options": ["Crear una nueva función que, cuando se llama, tiene su 'this' establecido a un valor específico", "Unir dos arrays en uno solo", "Detener la propagación de un evento", "Convertir una cadena en un número"],
+        "answer": "Crear una nueva función que, cuando se llama, tiene su 'this' establecido a un valor específico",
+        "explanation": "El método 'bind()' crea una nueva función que, cuando es invocada, tiene su 'this' establecido al valor proporcionado."
+    },
+    {
+        "question": "¿Qué es una 'closure' en JavaScript?",
+        "options": ["Una función que tiene acceso a su propio ámbito, al ámbito de la función externa y al ámbito global", "Un método para ejecutar código asíncrono", "Una técnica para prevenir la fuga de memoria", "Una función que se ejecuta automáticamente"],
+        "answer": "Una función que tiene acceso a su propio ámbito, al ámbito de la función externa y al ámbito global",
+        "explanation": "Una closure es una función que tiene acceso a las variables de su propio alcance, a las variables de su función externa y al alcance global."
+    },
+    {
+        "question": "¿Cuál es el resultado de la siguiente expresión?\n\n[1, 2, 3].map(num => {\n  if (typeof num === 'number') return;\n  return num * 2;\n});",
+        "options": ["[2, 4, 6]", "[undefined, undefined, undefined]", "[null, null, null]", "[1, 2, 3]"],
+        "answer": "[undefined, undefined, undefined]",
+        "explanation": "El método 'map()' devuelve un nuevo array con los resultados de la función aplicada a cada elemento. En este caso, la función no retorna explícitamente un valor, por lo que devuelve 'undefined' para cada elemento."
+    },
+    {
+        "question": "¿Cuál es el propósito del método 'call()' en JavaScript?",
+        "options": ["Invocar una función con un 'this' y argumentos proporcionados individualmente", "Crear un nuevo array a partir de un array existente", "Detener la ejecución de una función", "Encadenar múltiples llamadas de funciones"],
+        "answer": "Invocar una función con un 'this' y argumentos proporcionados individualmente",
+        "explanation": "El método 'call()' llama a una función con un valor 'this' y argumentos proporcionados de forma individual."
+    },
+    {
+        "question": "¿Qué es un 'Promise' en JavaScript?",
+        "options": ["Un objeto que representa la eventual finalización (o fracaso) de una operación asíncrona y su valor resultante", "Una técnica para iterar sobre elementos de un array", "Una función que se ejecuta inmediatamente", "Un método para manipular strings"],
+        "answer": "Un objeto que representa la eventual finalización (o fracaso) de una operación asíncrona y su valor resultante",
+        "explanation": "Un Promise es un objeto que representa una operación asíncrona que puede completarse con éxito o fracasar, y permite manejar sus resultados futuros."
+    }
+]
