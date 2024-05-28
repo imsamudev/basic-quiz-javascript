@@ -35,6 +35,20 @@ body {
   width: 90%;
 }
 
+#levelSelection {
+  display: none;
+}
+.level-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.level-title {
+  width: 80%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
 #question {
   text-align: center;
   width: 80%;
