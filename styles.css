@@ -2,13 +2,13 @@
   margin: 0 auto;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
 }
 
 :root {
   --amarillo-js: #ffd600;
   --blanco: #f0f0f0;
   --gris-claro: #e6e6dc;
+  --negro-standard: #333;
   --negro: #000;
 }
 
@@ -17,6 +17,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 }
 
 body {
@@ -33,6 +34,43 @@ body {
   border-radius: 10px;
   height: 90%;
   width: 90%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-content {
+  background-color: var(--amarillo-js);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#startQuiz {
+  height: 250px;
+  width: 250px;
+  background-color: var(--amarillo-js);
+  margin: 50px 0px;
+  border-radius: 20px;
+}
+
+#startQuiz:hover {
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
 }
 
 #levelSelection {
@@ -104,42 +142,6 @@ button {
   margin-bottom: 20px;
   width: 100%;
   cursor: pointer;
-}
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.modal-content {
-  background-color: var(--amarillo-js);
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#startQuiz {
-  height: 250px;
-  width: 250px;
-  background-color: var(--amarillo-js);
-  margin: 50px 0px;
-  border-radius: 20px;
-}
-
-#startQuiz:hover {
-  transition: ease-in-out 0.3s;
-  transform: scale(1.1);
 }
 /* diseño mobile-first */
 @media (min-width: 768px) {
