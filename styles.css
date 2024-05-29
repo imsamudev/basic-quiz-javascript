@@ -8,7 +8,7 @@
   --amarillo-js: #ffd600;
   --blanco: #f0f0f0;
   --gris-claro: #e6e6dc;
-  --negro-standard: #464646;
+  --gris: #646464;
   --negro: #000;
 }
 
@@ -80,7 +80,7 @@ body {
 }
 .level-section {
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 .level-title {
   width: 80%;
@@ -91,19 +91,39 @@ body {
 #question {
   text-align: center;
   width: 80%;
+  font-size: 1.2rem;
+  font-weight: 700;
   word-wrap: break-word;
+  padding: 20px 0px;
 }
 
 #options {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
 button {
+  width: 80%;
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px 5px;
+  border: none;
+  font-weight: 800;
+  font-size: 1rem;
+  background-color: var(--amarillo-js);
+  color: var(--gris);
+  box-shadow: 0px 2px 5px var(--gris);
   cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--amarillo-js);
+  font-weight: 800;
+  color: var(--negro);
+  box-shadow: 0px 10px 5px var(--gris);
+  transform: scale(1.03);
+  transition: 0.3s all;
 }
 
 #score {
@@ -148,5 +168,12 @@ button {
 @media (min-width: 768px) {
   .level-section {
     width: 50%;
+  }
+  #options {
+    width: 75%;
+  }
+  button {
+    background-color: transparent;
+    font-weight: 600;
   }
 }
