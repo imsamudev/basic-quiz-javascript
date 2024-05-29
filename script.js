@@ -24,7 +24,9 @@ function displayQuestion(questionObj) {
   const questionElement = document.getElementById("question");
   const optionsElement = document.getElementById("options");
 
-  questionElement.textContent = questionObj.question;
+  // Aplico replace para los saltos de línea en las preguntas
+  const formattedQuestion = questionObj.question.replace(/\n/g, "<br>");
+  questionElement.innerHTML = formattedQuestion;
   optionsElement.innerHTML = "";
 
   questionObj.options.forEach((option) => {
