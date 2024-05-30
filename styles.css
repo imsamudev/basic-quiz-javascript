@@ -66,6 +66,7 @@ body {
   background-color: var(--amarillo-js);
   margin: 50px 0px;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 #startQuiz:hover {
@@ -86,6 +87,12 @@ body {
   width: 80%;
   word-wrap: break-word;
   text-align: center;
+}
+
+#advertising {
+  width: 80%;
+  text-align: center;
+  padding: 15px 0px;
 }
 
 #question {
