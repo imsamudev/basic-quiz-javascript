@@ -7,7 +7,7 @@
 :root {
   --amarillo-js: #ffd600;
   --blanco: #f0f0f0;
-  --gris-claro: #e6e6dc;
+  --gris-claro: #e6e6e6;
   --gris: #646464;
   --negro: #000;
 }
@@ -141,15 +141,37 @@ button:hover {
 
 #responseTable {
   display: none;
-  height: 40%;
+  height: 45%;
   width: 90%;
   font-size: 0.8rem;
   text-align: left;
   padding: 10px;
-  background-color: var(--gris-claro);
+  background-color: var(--blanco);
   border-radius: 10px;
   overflow: hidden;
   overflow-y: scroll;
+  border-collapse: separate;
+}
+
+#questionAnswer {
+  width: 20%;
+}
+#yourAnswer {
+  width: 40%;
+}
+#correctAnswer {
+  width: 40%;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  border: 5px solid var(--blanco);
+  border-radius: 10px;
+  text-align: center;
+  background-color: var(--gris-claro);
 }
 
 .accordion {
@@ -158,13 +180,21 @@ button:hover {
 
 #correction {
   display: none;
-  height: 40%;
+  height: 45%;
   width: 90%;
   text-align: left;
   padding: 10px;
   overflow: hidden;
   overflow-y: scroll;
-  margin-bottom: 10px;
+  margin: 10px 0px;
+}
+
+#item {
+  margin: 20px 0px;
+}
+
+.correctionText {
+  margin: 5px 0px;
 }
 #toggleAccordion {
   margin-bottom: 20px;
@@ -182,5 +212,13 @@ button:hover {
   button {
     background-color: transparent;
     font-weight: 600;
+  }
+  #responseTable,
+  #correction {
+    font-size: 1rem;
+  }
+  td {
+    text-align: left;
+    padding: 15px;
   }
 }

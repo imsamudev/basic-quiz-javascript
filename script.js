@@ -109,13 +109,21 @@ function showScore() {
     if (response.userAnswer !== response.correctAnswer) {
       const correctionItem = document.createElement("div");
       correctionItem.innerHTML = `
-      <p><strong>Pregunta:</strong> ${response.question}</p>
-    <p><strong>Respuesta seleccionada:</strong> ${response.userAnswer}</p>
-    <p><strong>Respuesta correcta:</strong> ${response.correctAnswer}</p>
-    <p><strong>Explicación:</strong> ${
+      <div id ="item">
+      <p class="correctionText"><strong>Pregunta:</strong> ${
+        response.question
+      }</p>
+    <p class="correctionText"><strong>Respuesta seleccionada:</strong> ${
+      response.userAnswer
+    }</p>
+    <p class="correctionText"><strong>Respuesta correcta:</strong> ${
+      response.correctAnswer
+    }</p>
+    <p class="correctionText"><strong>Explicación:</strong> ${
       questions.find((question) => question.question === response.question)
         .explanation
     }</p>
+    </div>
   `;
       correctionAccordion.appendChild(correctionItem);
     }
