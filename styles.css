@@ -191,6 +191,10 @@ td {
 
 #item {
   margin: 20px 0px;
+  padding: 5px;
+  background-color: var(--amarillo-js);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .correctionText {
@@ -198,7 +202,9 @@ td {
 }
 #toggleAccordion {
   margin-bottom: 20px;
-  width: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
 }
 /* diseño mobile-first */
