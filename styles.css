@@ -214,11 +214,11 @@ td {
 }
 
 .fade-in {
-  animation: fadeIn ease 1s;
+  animation: fadeIn ease-in-out 1s;
 }
 
 .fade-out {
-  animation: fadeOut ease 1s;
+  animation: fadeOut ease-in-out 1s;
 }
 
 @keyframes fadeIn {
