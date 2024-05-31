@@ -29,6 +29,17 @@ body {
   background-color: var(--amarillo-js);
 }
 
+/* chrome scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--amarillo-js);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--gris);
+  border-radius: 10px;
+}
+
 .container {
   flex-direction: column;
   background-color: var(--blanco);
