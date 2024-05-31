@@ -150,17 +150,7 @@ button:hover {
   border-radius: 10px;
   overflow: hidden;
   overflow-y: scroll;
-  border-collapse: separate;
-}
-
-#questionAnswer {
-  width: 20%;
-}
-#yourAnswer {
-  width: 40%;
-}
-#correctAnswer {
-  width: 40%;
+  border-collapse: collapse;
 }
 
 th {
@@ -168,9 +158,10 @@ th {
 }
 
 td {
-  border: 5px solid var(--blanco);
+  font-size: 0.7rem;
+  border: 2px solid var(--blanco);
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   background-color: var(--gris-claro);
 }
 
@@ -195,7 +186,7 @@ td {
   background-color: var(--amarillo-js);
   border-radius: 10px;
   box-shadow: 0px 2px 5px var(--gris);
-  text-align: center;
+  text-align: left;
 }
 
 .correctionText {
@@ -227,5 +218,20 @@ td {
   td {
     text-align: left;
     padding: 15px;
+  }
+  #responseTable {
+    border-collapse: separate;
+  }
+  #questionAnswer {
+    width: 20%;
+  }
+  #yourAnswer {
+    width: 40%;
+  }
+  #correctAnswer {
+    width: 40%;
+  }
+  td {
+    font-size: 1rem;
   }
 }
