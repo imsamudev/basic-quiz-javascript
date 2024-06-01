@@ -8,6 +8,7 @@
 
 :root {
   --amarillo-js: #ffd600;
+  --amarillo-claro: #ffef9e;
   --blanco: #f0f0f0;
   --gris-claro: #e6e6e6;
   --gris: #646464;
@@ -211,7 +212,7 @@ button:hover {
   font-size: 0.8rem;
   text-align: left;
   padding: 10px;
-  background-color: var(--blanco);
+  background-color: var(--amarillo-js);
   border-radius: 10px;
   overflow: hidden;
   overflow-y: scroll;
@@ -224,10 +225,9 @@ th {
 
 td {
   font-size: 0.7rem;
-  border: 2px solid var(--blanco);
-  border-radius: 10px;
+  border: 2px solid var(--amarillo-js);
   text-align: left;
-  background-color: var(--gris-claro);
+  background-color: var(--amarillo-claro);
 }
 
 .accordion {
