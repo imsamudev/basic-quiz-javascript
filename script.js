@@ -158,16 +158,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   var levelSelection = document.getElementById("levelSelection");
   var startQuiz = document.getElementById("startQuiz");
 
-  modal.classList.add("fade-in");
   modal.style.display = "flex";
 
   // Al pulsar el logo muestro la selección del nivel
   startQuiz.onclick = function () {
-    setTimeout(() => {
-      modal.style.display = "none";
-      levelSelection.style.display = "block";
-      levelSelection.classList.add("fade-in");
-    }, 500);
+    modal.style.display = "none";
+    levelSelection.style.display = "block";
+    levelSelection.classList.add("fade-in");
   };
 
   var startBeginnerQuiz = document.getElementById("startBeginnerQuiz");
