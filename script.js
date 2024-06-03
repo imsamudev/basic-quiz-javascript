@@ -19,6 +19,15 @@ function shuffleQuestions() {
   questions = questions.sort(() => Math.random() - 0.5);
 }
 
+// desordenar un array, es decir en este caso las opciones
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 // Mostrar pregunta y sus opciones
 function displayQuestion(questionObj) {
   const questionElement = document.getElementById("question");
@@ -37,7 +46,10 @@ function displayQuestion(questionObj) {
     questionElement.innerHTML = formattedQuestion;
     optionsElement.innerHTML = "";
 
-    questionObj.options.forEach((option) => {
+    // desordenar las opciones
+    const shuffledOptions = shuffleArray([...questionObj.options]);
+
+    shuffledOptions.forEach((option) => {
       const optionElement = document.createElement("button");
       optionElement.textContent = option;
       optionElement.addEventListener("click", () =>
