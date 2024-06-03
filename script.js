@@ -1,8 +1,8 @@
-// Dejaré comentarios en el desarrollo JS para mejor comprensión.
+// Dejaré comentarios en el desarrollo JS para mejor comprensión. Con fines educativos y exhibición de mis trabajos.
 
 // Al aprender sobre JSON, decidí alojar las preguntas y respuestas en un .json aparte. Usando fetch en la función loadQuestions de forma asincrónica extraemos las preguntas, opciones y respuestas.
-
 let questions = [];
+let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let userResponses = [];
 
@@ -10,13 +10,14 @@ let userResponses = [];
 async function loadQuestions(file) {
   const response = await fetch(file);
   questions = await response.json();
-  shuffleQuestions();
-  displayQuestion(questions[currentQuestionIndex]);
+  selectRandomQuestions();
+  displayQuestion(selectedQuestions[currentQuestionIndex]);
 }
 
-// Desordenar las preguntas
-function shuffleQuestions() {
-  questions = questions.sort(() => Math.random() - 0.5);
+// selecciono 10 preguntas del conjunto grande JSON
+function selectRandomQuestions() {
+  const shuffled = shuffleArray([...questions]);
+  selectedQuestions = shuffled.slice(0, 10);
 }
 
 // desordenar un array, es decir en este caso las opciones
@@ -68,15 +69,15 @@ function displayQuestion(questionObj) {
 // Verificación de respuesta seleccionada por usuario
 function checkAnswer(selectedAnswer, correctAnswer) {
   userResponses.push({
-    question: questions[currentQuestionIndex].question,
+    question: selectedQuestions[currentQuestionIndex].question,
     userAnswer: selectedAnswer,
     correctAnswer: correctAnswer,
   });
 
   // Siguiente pregunta
   currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
-    displayQuestion(questions[currentQuestionIndex]);
+  if (currentQuestionIndex < selectedQuestions.length) {
+    displayQuestion(selectedQuestions[currentQuestionIndex]);
   } else {
     showScore();
   }
@@ -111,9 +112,9 @@ function showScore() {
       row.insertCell(2).textContent = response.correctAnswer;
     });
 
-    const percentage = (correctCount / questions.length) * 100;
+    const percentage = (correctCount / selectedQuestions.length) * 100;
     scoreElement.textContent = `Puntuación final: ${correctCount}/${
-      questions.length
+      selectedQuestions.length
     } respuestas correctas (${percentage.toFixed(2)}%).`;
 
     // Ejecutar tabla de puntuación al finalizar el quizz.
