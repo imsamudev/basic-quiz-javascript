@@ -58,5 +58,35 @@
         "options": ["Un objeto que representa la eventual finalización (o fracaso) de una operación asíncrona y su valor resultante", "Una técnica para iterar sobre elementos de un array", "Una función que se ejecuta inmediatamente", "Un método para manipular strings"],
         "answer": "Un objeto que representa la eventual finalización (o fracaso) de una operación asíncrona y su valor resultante",
         "explanation": "Un Promise es un objeto que representa una operación asíncrona que puede completarse con éxito o fracasar, y permite manejar sus resultados futuros."
+    },
+    {
+        "question": "¿Cuál es la salida del siguiente código?\n\nconsole.log([1, 2, 3] + [4, 5, 6]);",
+        "options": ["\"[1, 2, 3, 4, 5, 6]\"", "\"1,2,34,5,6\"", "\"1,2,34,5,6,\"", "\"[1,2,3][4,5,6]\""],
+        "answer": "\"1,2,34,5,6\"",
+        "explanation": "En JavaScript, el operador `+` se usa para concatenar cadenas. Cuando se aplica a arrays, estos se convierten a cadenas y luego se concatenan, resultando en '1,2,34,5,6'."
+    },
+    {
+        "question": "¿Cuál es la salida del siguiente código?\n\nlet x = 10;\n(function() { console.log(x); var x = 20; })();",
+        "options": ["10", "20", "undefined", "ReferenceError"],
+        "answer": "undefined",
+        "explanation": "Debido al 'hoisting', la declaración `var x` se eleva al principio de la función, pero su inicialización no. Por lo tanto, `x` se encuentra como 'undefined' en la llamada a `console.log`."
+    },
+    {
+        "question": "¿Cuál es la salida del siguiente código?\n\nconsole.log(0.1 + 0.2 == 0.3);",
+        "options": ["true", "false", "undefined", "NaN"],
+        "answer": "false",
+        "explanation": "En JavaScript, la suma de 0.1 y 0.2 no es exactamente 0.3 debido a la precisión de punto flotante, por lo que la comparación retorna 'false'."
+    },
+    {
+        "question": "¿Cuál es la salida del siguiente código?\n\nlet obj = {a: 1, b: 2};\nlet clone = {...obj};\nclone.a = 3;\nconsole.log(obj.a);",
+        "options": ["1", "2", "3", "undefined"],
+        "answer": "1",
+        "explanation": "El operador de propagación '...' crea un nuevo objeto con las mismas propiedades, por lo que cambiar 'clone.a' no afecta al objeto original 'obj'."
+    },
+    {
+        "question": "¿Cuál es el resultado de la siguiente expresión?\n\n[...'hello'];",
+        "options": ["['h', 'e', 'l', 'l', 'o']", "['hello']", "[['h', 'e', 'l', 'l', 'o']]", "[undefined]"],
+        "answer": "['h', 'e', 'l', 'l', 'o']",
+        "explanation": "El operador de propagación '...' divide una cadena en caracteres individuales, por lo que [...'hello'] resulta en ['h', 'e', 'l', 'l', 'o']."
     }
 ]
