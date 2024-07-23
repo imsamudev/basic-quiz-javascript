@@ -24,9 +24,9 @@ Es un proyecto que te permite poner a prueba tus conocimientos de JavaScript de 
 
 ## Cómo Jugar
 
-¡Es fácil comenzar! Simplemente sigue este [enlace](https://imsamudev01.github.io/basic-quiz-javascript/) para acceder al Quiz Básico de JavaScript. ¿Estás listo para desafiar tus habilidades de programación?
+¡Es fácil comenzar! Simplemente sigue este [enlace](https://imsamudev.github.io/basic-quiz-javascript/) para acceder al Quiz Básico de JavaScript. ¿Estás listo para desafiar tus habilidades de programación?
 
-![Ejemplo del Quiz](https://github.com/imsamudev01/basic-quiz-javascript/assets/160678978/c4615117-b006-4855-b0e5-915ac11c91ce)
+![Ejemplo del Quiz](https://github.com/imsamudev/basic-quiz-javascript/assets/160678978/c4615117-b006-4855-b0e5-915ac11c91ce)
 
 ¡Espero que disfrutes jugando y aprendiendo con JavaScript Quiz!
 
